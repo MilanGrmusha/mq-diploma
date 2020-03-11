@@ -1,0 +1,148 @@
+html, body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+}
+
+/* Common styles */
+.container {
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.visually-hidden {
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+}
+
+/* Main styles */
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #212449;
+    color: #fff;
+}
+
+.header::after {
+    content: "";
+    background-color: #212449;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.90;
+}
+
+.header > * {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    text-align: center;
+    height: 36px;
+    margin-top: 20px;
+}
+.logo svg { height: inherit; }
+.logo svg > g { fill: #fff; }
+
+.welcome {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.welcome-title {
+    font-weight: bold;
+}
+
+.apps {
+    display: flex;
+}
+
+.apps .app-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5e42b0;
+    border-radius: 16px;
+    color: #fff;
+    height: 35px;
+    border: none;
+}
+
+.apps .app-btn:nth-child(2n) {
+    margin-top: 14px;
+}
+
+.apps .app-btn .app-btn-img {
+    fill: #fff;
+    height: 25px;
+}
+
+.apps .app-btn .app-btn-text {
+    font-size: 8px;
+    text-transform: uppercase;
+    margin-left: 8px;
+    text-align: left;
+}
+
+.apps .app-btn .app-btn-store {
+    font-weight: bold;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 320px) {
+    .header {
+        background-image: url("../images/football_767.jpg");
+        justify-content: space-between;
+    }
+
+    .logo {
+        height: 36px;
+    }
+
+    .welcome-title {
+        font-size: 28px;
+    }
+    
+    .welcome-title .welcome-second {
+        margin-left: 45px;
+    }
+
+    .apps {
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .header {
+        background-image: url("../images/football_1280.jpg");
+        align-content: space-between;
+    }
+
+    .welcome {
+        margin-top: 180px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) {
+    .header {
+        background-image: url("../images/football_1920.jpg");
+    }
+
+    .welcome {
+        margin-top: 290px;
+    }
+}
