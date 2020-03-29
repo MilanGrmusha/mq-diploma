@@ -9,9 +9,9 @@
 
 @font-face {
     font-family: "Open Sans";
-    src: url("../fonts/OpenSans-Regular.ttf"),
-         url("../fonts/OpenSans-Regular.woff"),
-         url("../fonts/OpenSans-Regular.woff2");
+    src: url("../fonts/OpenSans-Bold.ttf"),
+         url("../fonts/OpenSans-Bold.woff"),
+         url("../fonts/OpenSans-Bold.woff2");
     font-weight: 600;
     font-style: bold;
 }

@@ -1,13 +1,16 @@
 html, body {
     font-family: "Open Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 /* Common styles */
-.container {
-    height: 100vh;
+.padding {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.vh100 {
+    height: 100vh;
 }
 
 .visually-hidden {
@@ -98,6 +101,63 @@ html, body {
     font-weight: bold;
 }
 
+.list-card { }
+
+.list-card__title {
+    font-size: 50px;
+    color: #e7e7e7;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.list-card__list-item.lighter {
+    background-color: #fafafa;
+}
+
+.list-card__list-item.light {
+    background-color: #f5f4f9;
+}
+
+.list-card__list-item.highlighted {
+    background-color: #5e42b0;
+    color: #fff;
+}
+
+.list-card__list-item.highlighted .list-item__number {
+    border-bottom-color: #fff;
+}
+
+
+.list-item {}
+
+.list-item__header {
+    display: flex;
+
+}
+
+.list-item__number {
+    color: #000000;
+    flex-grow: 0;
+    font-size: 14px;
+    height: 18px;
+    margin-right: 8px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border-bottom: 4px solid #5e42b0;
+}
+
+.list-item__title {
+    font-size: 23px;
+    color: #c1c1c1;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+
+.list-item__description {
+    margin-top: 28px;
+    font-size: 15px;
+}
 
 /* Mobile */
 @media screen and (max-width: 320px) {
@@ -115,12 +175,42 @@ html, body {
     }
     
     .welcome-title .welcome-second {
-        margin-left: 45px;
+        margin-left: 42px;
     }
 
     .apps {
         flex-direction: column;
         margin-bottom: 80px;
+    }
+
+    .list-card__title  {
+        margin-top: 25px;
+    }
+
+    .list-card__image {
+        margin-top: 15px;
+        position: relative;
+        height: 285px;
+        z-index: 1;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .list-card__image.footballer {
+        background-image: url('../images/footballer_192.png');
+    }
+
+    .list-card__list {
+        margin-top: -55px;
+    }
+
+    .list-card__list-item {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+    .list-card__list-item:first-child {
+        padding-top: 80px;
     }
 }
 
