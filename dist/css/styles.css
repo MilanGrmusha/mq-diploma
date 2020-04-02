@@ -15,7 +15,7 @@ html, body {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute;
 }
-
+ 
 /* Main styles */
 .header,
 .footer {
