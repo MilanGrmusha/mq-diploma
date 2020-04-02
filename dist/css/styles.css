@@ -573,11 +573,55 @@ html, body {
 
 /* Desktop */
 @media screen and (min-width: 769px) {
+    .padding {
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+
     .header {
         background-image: url("../images/football_1920.jpg");
+    }
+
+    .logo {
+        margin-top: 40px;
+        height: 56px;
     }
 
     .welcome {
         margin-top: 290px;
     }
+
+    .welcome-title {
+        font-size: 90px;
+    }
+
+    .welcome-second {
+        margin-left: 25%;
+    }
+
+    .apps {
+        margin-top: 218px;
+        margin-bottom: 110px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .apps .app-btn {    
+        width: 310px;
+        height: 80px;
+        border-radius: 45px;
+    }
+    .apps .app-btn:nth-child(2) {
+        margin-left: 50px;
+    }
+
+    .apps .app-btn .app-btn-text {
+        font-size: 14px;
+        margin-left: 14px;
+    }
+
+    .apps .app-btn .app-btn-img {
+        height: 50px;
+    }
+    
 }
