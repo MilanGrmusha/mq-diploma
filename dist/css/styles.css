@@ -123,8 +123,8 @@ html, body {
     color: #fff;
 }
 
-.list-card__list-item.highlighted .list-item__number {
-    border-bottom-color: #fff;
+.list-card__list-item.highlighted .list-item__number::after {
+    background-color: #fff;
 }
 
 
@@ -137,13 +137,20 @@ html, body {
 
 .list-item__number {
     color: #000000;
-    flex-grow: 0;
     font-size: 14px;
-    height: 18px;
     margin-right: 8px;
     font-weight: bold;
-    box-sizing: border-box;
-    border-bottom: 4px solid #5e42b0;
+    position: relative;
+}
+.list-item__number::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: #5e42b0;
+    border-radius: 1.5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .list-item__title {
@@ -190,7 +197,6 @@ html, body {
     .list-card__image {
         margin-top: 15px;
         position: relative;
-        height: 285px;
         z-index: 1;
         background-size: contain;
         background-position: center center;
@@ -198,7 +204,13 @@ html, body {
     }
 
     .list-card__image.footballer {
+        height: 285px;
         background-image: url('../images/footballer_192.png');
+    }
+
+    .list-card__image.basketballer {
+        height: 245px;
+        background-image: url('../images/basketballer_302.png');
     }
 
     .list-card__list {
