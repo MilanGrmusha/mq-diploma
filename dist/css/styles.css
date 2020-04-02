@@ -4,10 +4,6 @@ html, body {
 }
 
 /* Common styles */
-.padding {
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
 .vh100 {
     height: 100vh;
@@ -54,7 +50,6 @@ html, body {
 .logo {
     text-align: center;
     height: 36px;
-    margin-top: 20px;
 }
 .logo svg { height: inherit; }
 .logo svg > g { fill: #fff; }
@@ -78,25 +73,16 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: #5e42b0;
-    border-radius: 16px;
     color: #fff;
-    height: 35px;
     border: none;
-}
-
-.apps .app-btn:nth-child(2n) {
-    margin-top: 14px;
 }
 
 .apps .app-btn .app-btn-img {
     fill: #fff;
-    height: 25px;
 }
 
 .apps .app-btn .app-btn-text {
-    font-size: 8px;
     text-transform: uppercase;
-    margin-left: 8px;
     text-align: left;
 }
 
@@ -104,30 +90,16 @@ html, body {
     font-weight: bold;
 }
 
-.list-card { }
+.list-card { position: relative; }
 
 .list-card__title {
-    font-size: 50px;
     color: #e7e7e7;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.list-card__list-item.lighter {
-    background-color: #fafafa;
-}
-
-.list-card__list-item.light {
-    background-color: #f5f4f9;
-}
-
-.list-card__list-item.highlighted {
-    background-color: #5e42b0;
-    color: #fff;
-}
-
-.list-card__list-item.highlighted .list-item__number::after {
-    background-color: #fff;
+.list-card__image {
+    background-repeat: no-repeat;
 }
 
 .list-item {}
@@ -155,7 +127,6 @@ html, body {
 }
 
 .list-item__title {
-    font-size: 23px;
     color: #c1c1c1;
     font-weight: bold;
     text-transform: uppercase;
@@ -173,6 +144,7 @@ html, body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+    max-width: 100%;
 }
 
 .photo-card__number-container {
@@ -223,12 +195,12 @@ html, body {
 
 .action {
     text-transform: uppercase;
-    font-weight: bold;
     text-align: center;
 }
 
 .action__main {
     color: #fff;
+    font-weight: bold;
 }
 
 .action__secondary {
@@ -237,12 +209,18 @@ html, body {
 
 /* Mobile */
 @media screen and (max-width: 320px) {
+    .padding {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .header {
         background-image: url("../images/football_767.jpg");
         justify-content: space-between;
     }
 
     .logo {
+        margin-top: 20px;
         height: 36px;
     }
 
@@ -265,7 +243,26 @@ html, body {
         margin-bottom: 80px;
     }
 
+    .apps .app-btn {
+        height: 35px;
+        border-radius: 16px;
+    }
+
+    .apps .app-btn:nth-child(2n) {
+        margin-top: 14px;
+    }
+
+    .apps .app-btn .app-btn-text {
+        font-size: 8px;
+        margin-left: 8px;
+    }
+
+    .apps .app-btn .app-btn-img {
+        height: 25px;
+    }
+    
     .list-card__title {
+        font-size: 50px;
         margin-top: 25px;
     }
 
@@ -273,9 +270,8 @@ html, body {
         margin-top: 15px;
         position: relative;
         z-index: 1;
-        background-size: contain;
         background-position: center center;
-        background-repeat: no-repeat;
+        background-size: contain;
     }
 
     .list-card__image.footballer {
@@ -292,12 +288,33 @@ html, body {
         margin-top: -55px;
     }
 
+    .list-item__title {
+        font-size: 23px;
+    }
+
     .list-card__list-item {
         padding-top: 55px;
         padding-bottom: 55px;
     }
     .list-card__list-item:first-child {
         padding-top: 80px;
+    }
+    
+    .list-card__list-item.lighter {
+        background-color: #fafafa;
+    }
+    
+    .list-card__list-item.light {
+        background-color: #f5f4f9;
+    }
+
+    .list-card__list-item.highlighted {
+        background-color: #5e42b0;
+        color: #fff;
+    }
+
+    .list-card__list-item.highlighted .list-item__number::after {
+        background-color: #fff;
     }
 
     .photo-card__image {
@@ -362,13 +379,195 @@ html, body {
 
 /* Tablet */
 @media screen and (min-width: 321px) and (max-width: 768px) {
+    .padding {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
     .header {
         background-image: url("../images/football_1280.jpg");
         align-content: space-between;
     }
+    
+    .logo {
+        margin-top: 40px;
+        height: 56px;
+    }
 
     .welcome {
         margin-top: 180px;
+        font-size: 64px;
+        padding-left: 58px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .welcome-second {
+        margin-left: 110px;
+    }
+
+    .apps {
+        margin-top: 306px;
+        margin-bottom: 90px;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .apps .app-btn {    
+        width: 300px;
+        height: 80px;
+        border-radius: 45px;
+    }
+
+    .apps .app-btn .app-btn-text {
+        font-size: 14px;
+        margin-left: 25px;
+    }
+
+    .apps .app-btn .app-btn-img {
+        height: 45px;
+    }
+
+    .list-card:nth-child(odd) .list-card__title.padding,
+    .list-card:nth-child(odd) .list-card__list-item {
+        padding-left: 293px;
+        padding-right: 32px;
+    }
+
+    .list-card:nth-child(even) .list-card__title.padding,
+    .list-card:nth-child(even) .list-card__list-item {
+        padding-right: 293px;
+        padding-left: 32px;
+    }
+
+    .list-card__title {
+        margin-top: 86px;
+        font-size: 80px;
+        margin-bottom: 20px;
+    }
+
+    .list-card__image {
+        position: absolute;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .list-card__image.footballer {
+        top: 32px;
+        width: 293px;
+        background-position-x: -156px;
+        background-image: url("../images/footballer_497.png");
+    }
+
+    .list-card__image.basketballer {
+        right: 0;
+        width: 440px;
+        top: -18px;
+        background-position-x: 100%;
+        background-image: url("../images/basketballer_436.png");
+    }
+
+    .list-card__list-item {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .list-card__list-item.lighter {
+        background-color: #fff;
+    }
+    
+    .list-card__list-item.light {
+        background-color: #f5f4f9;
+    }
+
+    .list-card__list-item.highlighted {
+        background-color: #090c35;
+        color: #fff;
+    }
+
+    .list-card__list-item.highlighted .list-item__number {
+        color: #8765dd;
+    }
+
+    .list-card__list-item.highlighted .list-item__number::after {
+        background-color: #fff;
+    }
+
+    .list-item.padding {
+        padding-left: 0;
+    }
+    
+    .list-item__number {
+        font-size: 18px;
+    }
+
+    .list-item__title {
+        font-size: 32px;
+    }
+
+    .list-item__description {
+        font-size: 16px;
+    }
+    
+    .photo-card__number-container {
+        width: 116px;
+        height: 116px;
+        margin-left: 25px;
+        margin-top: -80px;
+    }
+
+    .photo-card__number {
+        font-size: 24px;
+        height: 30px;
+    }
+
+    .photo-card__title {
+        margin-top: 56px;
+        font-size: 80px;
+    }
+
+    .photo-card__description {
+        margin-top: 37px;
+        margin-bottom: 100px;
+        font-size: 24px;
+    }
+
+    .footer {
+        background-image: url("../images/game_1280.jpg");
+        justify-content: space-between;
+    }
+    
+    .logo-square {
+        margin-top: 100px;
+        width: 130px;
+        height: 137px;
+    }
+
+    .logo-square svg {
+        height: 85px;
+    }
+
+    .action {
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    .action__main {
+        font-size: 80px;
+    }
+
+    .action__secondary {
+        margin-top: 28px;
+        font-size: 36px;
+    }
+
+    .footer .apps {
+        margin-bottom: 50px;
+    }
+
+    .footer .logo {
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 }
 
