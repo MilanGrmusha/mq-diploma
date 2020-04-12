@@ -164,6 +164,7 @@ html, body {
     font-size: calc(14px + 1.3vw);
     font-weight: bold;
     margin-right: 10px;
+    color:#010100;
 }
 .list-box-number::after {
     content: "";
